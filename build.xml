@@ -80,7 +80,7 @@
       version="true"
       windowtitle="${Name} API"
       doctitle="${Name}"
-      bottom="Copyright © 2000 GroupServe. All Rights Reserved."/>
+      bottom="Copyright © 2016 MyCompany. All Rights Reserved."/>
  </target>
  
 </project>
