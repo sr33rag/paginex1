@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="paginex1"
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  version="2.5">
+  <display-name>Pagination and Sorting example</display-name>
+  <description>
+    A MVC 2 application using Servlet as FrontController,
+    POJOs for model and JSP as View for demonstrating sorting 
+    and pagination using JDBC Dao with MySQL as backend and Comparator classes.
+  </description>
+  <servlet>
+   <servlet-name>controller</servlet-name>
+   <servlet-class>net.codesree.paginex1.controller.Controller</servlet-class>
+   <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>controller</servlet-name>
+   <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+   <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <session-config>
+   <session-timeout>10</session-timeout>
+  </session-config>
+  <context-param>
+   <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+   <param-value>net.codesree.paginex1.app-resources</param-value>
+  </context-param>
+</web-app>
