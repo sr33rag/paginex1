@@ -27,6 +27,6 @@
   </session-config>
   <context-param>
    <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
-   <param-value>net.codesree.paginex1.app-resources</param-value>
+   <param-value>app-resources</param-value>
   </context-param>
 </web-app>
