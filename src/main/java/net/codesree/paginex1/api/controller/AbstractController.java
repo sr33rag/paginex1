@@ -17,9 +17,11 @@ public abstract class AbstractController extends HttpServlet {
 
   public void init() {
     this.actionMap=new HashMap<>();
-    configure();
+    buildActionMap();
+    configure();  //for configuring datasources etc
   }
 
+  public abstract void buildActionMap() throws Exception;  
   public abstract void configure() throws Exception;  
   public abstract IAction getCommandAction(HttpServletRequest _req) throws Exception;
   

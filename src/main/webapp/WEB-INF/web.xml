@@ -22,6 +22,12 @@
   <welcome-file-list>
    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  <jsp-config>
+   <jsp-property-group>
+    <url-pattern>/*</url-pattern>
+    <scripting-invalid>true</scripting-invalid>
+   </jsp-property-group>
+  </jsp-config>
   <session-config>
    <session-timeout>10</session-timeout>
   </session-config>
@@ -29,4 +35,14 @@
    <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
    <param-value>app-resources</param-value>
   </context-param>
+  <security-constraint>
+   <display-name>Security Constraint</display-name>
+   <web-resource-collection>
+    <web-resource-name>Protected area</web-resource-name>
+    <url-pattern>/pages/*</url-pattern>
+   </web-resource-collection>
+   <auth-constraint>
+    <role-name>*</role-name>
+   </auth-constraint>
+  </security-constraint>
 </web-app>

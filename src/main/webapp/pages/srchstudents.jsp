@@ -25,8 +25,12 @@
        </select> &nbsp;
        <label for=""><fmt:message key="form.srchstudents.rexpp.label"/></label>
        <select id="rexpp" name="rexpp">
-        <!--option value=""></option-->
+        <!--option value="5">5</option-->
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
        </select>
+       <input type="submit" name="btnsubmit" id="btnsubmit" value="Search"/>
       </form> 
    </div><c:url var="homeurl" value="/home" scope="application" context="${pageContext.request.contextPath}"/>
    <div id="sidebar"><a href="${homeurl}"><fmt:message key="page.lststudents.link.home"/></a></div>
